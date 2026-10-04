@@ -14,7 +14,7 @@ export default function PageHero({ eyebrow, title, description }) {
       />
       <Reveal className="container-x relative">
         <p className="eyebrow">{eyebrow}</p>
-        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+        <h1 className="mt-4 font-display text-4xl tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
           {title}
         </h1>
         {description && (

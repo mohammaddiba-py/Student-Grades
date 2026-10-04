@@ -13,7 +13,7 @@ export default function VideoSection() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">The Horizon Film</p>
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-4xl tracking-tight text-white sm:text-[2.75rem]">
             Step Inside Our Homes
           </h2>
           <p className="mt-5 text-[15px] leading-relaxed text-white/70">

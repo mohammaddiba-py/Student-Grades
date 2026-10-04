@@ -1,6 +1,11 @@
 import Button from "./Button.jsx";
 import { HERO_IMAGE } from "../data/properties.js";
 
+const stats = [
+  { value: "$1.2B+", text: "In premium property sold across our prime markets" },
+  { value: "850+", text: "Exceptional homes matched with delighted clients" },
+];
+
 export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] flex-col items-center overflow-hidden bg-navy-950 pt-32 text-center">
@@ -11,7 +16,7 @@ export default function Hero() {
           fetchpriority="high"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/35 to-navy-950/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/30 to-navy-950/45" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6">
@@ -43,13 +48,36 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* floating stat chips, like the reference */}
+      <div className="absolute right-10 top-[40%] z-10 hidden w-60 flex-col gap-4 text-left xl:flex">
+        {stats.map((s, i) => (
+          <div
+            key={s.value}
+            className="animate-hero-rise rounded-2xl border border-white/20 bg-navy-950/35 p-5 backdrop-blur-md"
+            style={{ animationDelay: `${560 + i * 140}ms` }}
+          >
+            <p className="font-display text-3xl text-white">{s.value}</p>
+            <p className="mt-2 text-xs leading-relaxed text-white/70">{s.text}</p>
+          </div>
+        ))}
+      </div>
+
       {/* leaves generous room for the architecture below the copy, like the reference */}
       <div className="relative z-10 flex-1" aria-hidden="true" />
       <div
         className="relative z-10 h-0 w-full"
         aria-hidden="true"
-        style={{ marginBottom: "min(28vh, 300px)" }}
+        style={{ marginBottom: "min(30vh, 320px)" }}
       />
+
+      {/* signature display wordmark across the hero, echoing the reference */}
+      <p
+        aria-hidden="true"
+        className="animate-hero-rise pointer-events-none absolute inset-x-0 bottom-[13vh] z-[5] select-none whitespace-nowrap text-center font-display text-[clamp(4.5rem,17.5vw,15rem)] leading-none text-white/85"
+        style={{ animationDelay: "500ms" }}
+      >
+        Horizon
+      </p>
       <div
         className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-navy-950/70 to-transparent"
         aria-hidden="true"

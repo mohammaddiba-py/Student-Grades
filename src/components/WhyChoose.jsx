@@ -41,7 +41,7 @@ export default function WhyChoose() {
       <div className="container-x relative">
         <Reveal className="text-center">
           <p className="eyebrow">Why Horizon</p>
-          <h2 className="mx-auto mt-4 max-w-2xl text-4xl font-extrabold tracking-tight sm:text-[2.75rem]">
+          <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl tracking-tight sm:text-[2.75rem]">
             Why Choose Horizon Properties
           </h2>
         </Reveal>

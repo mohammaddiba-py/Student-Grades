@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Prata", "Georgia", serif;
 
   --color-navy-950: #081426;
   --color-navy-900: #0b1f3a;

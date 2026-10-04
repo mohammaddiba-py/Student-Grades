@@ -25,7 +25,7 @@ export default function CTA() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl font-extrabold tracking-tight text-navy-900 sm:text-[1.7rem]">
+              <h2 className="font-display text-2xl tracking-tight text-navy-900 sm:text-[1.7rem]">
                 Ready to Find Your Perfect Property?
               </h2>
               <p className="mt-2 text-sm text-slate-body sm:text-[15px]">

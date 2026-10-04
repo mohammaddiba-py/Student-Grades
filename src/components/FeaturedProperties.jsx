@@ -11,7 +11,7 @@ export default function FeaturedProperties() {
       <div className="container-x">
         <Reveal className="text-center">
           <p className="eyebrow">Featured</p>
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-navy-900 sm:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-4xl tracking-tight text-navy-900 sm:text-[2.75rem]">
             Featured Properties
           </h2>
         </Reveal>

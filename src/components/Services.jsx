@@ -7,7 +7,7 @@ export default function Services({ compact = false }) {
       <div className="container-x">
         <Reveal className="text-center">
           <p className="eyebrow">What We Do</p>
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-navy-900 sm:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-4xl tracking-tight text-navy-900 sm:text-[2.75rem]">
             Our Services
           </h2>
           {!compact && (
