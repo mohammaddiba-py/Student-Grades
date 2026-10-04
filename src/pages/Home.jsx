@@ -1,5 +1,6 @@
 import Hero from "../components/Hero.jsx";
 import About from "../components/About.jsx";
+import VideoSection from "../components/VideoSection.jsx";
 import FeaturedProperties from "../components/FeaturedProperties.jsx";
 import Services from "../components/Services.jsx";
 import WhyChoose from "../components/WhyChoose.jsx";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <VideoSection />
       <FeaturedProperties />
       <Services />
       <WhyChoose />
