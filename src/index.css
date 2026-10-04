@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-navy-950: #081426;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #12294b;
+  --color-navy-700: #1a3a63;
+  --color-navy-600: #274c7c;
+  --color-ink: #10203a;
+  --color-gold: #c9a96a;
+  --color-gold-soft: #e2cfa6;
+  --color-ivory: #f7f5f0;
+  --color-mist: #eef2f7;
+  --color-slate-body: #4b5a6e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy-900);
+}
+
+/* subtle, premium focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ---- utilities ---- */
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.28em] text-gold;
+}
+
+.container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+/* fade-up reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* image hover zoom inside a clipped frame */
+.zoom-frame {
+  @apply relative overflow-hidden;
+}
+.zoom-frame img {
+  @apply h-full w-full object-cover transition-transform duration-700 ease-out;
+}
+.zoom-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* hide scrollbar on carousels while keeping native scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* hero entrance */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes hero-settle {
+  from {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.animate-hero-rise {
+  animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-hero-settle {
+  animation: hero-settle 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-rise,
+  .animate-hero-settle {
+    animation: none;
+  }
+}
+
+/* mobile menu panel */
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-menu-in {
+  animation: menu-in 0.28s ease-out both;
+}
+
+/* gallery crossfade */
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-gallery-fade {
+  animation: gallery-fade 0.35s ease-out both;
+}
+
+/* lightbox */
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-lightbox-in {
+  animation: lightbox-in 0.25s ease-out both;
+}
+
+input[type="range"] {
+  accent-color: var(--color-navy-900);
+}
