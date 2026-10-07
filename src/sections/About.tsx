@@ -3,9 +3,9 @@ import { ArrowRight } from '../components/icons'
 import Reveal from '../components/Reveal'
 
 const MAIN_IMG =
-  'https://images.unsplash.com/photo-1600585154340-be6161a68a94?auto=format&fit=crop&w=1200&q=80'
+  'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80'
 const SECONDARY_IMG =
-  'https://images.unsplash.com/photo-1600607687939-ce8da625f1c0?auto=format&fit=crop&w=800&q=80'
+  'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80'
 
 export default function About() {
   return (

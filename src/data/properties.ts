@@ -1,7 +1,5 @@
 import type { Property, Service, TeamMember, Agent } from './types'
-
-const img = (id: string, w = 1200) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
+import { IMAGES } from './images'
 
 export const properties: Property[] = [
   {
@@ -21,12 +19,12 @@ export const properties: Property[] = [
     yearBuilt: 2021,
     garage: 2,
     featured: true,
-    image: img('1613490493576-7fde63acd311'),
+    image: IMAGES.villaDusk,
     gallery: [
-      img('1613490493576-7fde63acd311', 1600),
-      img('1600585154340-be6161a68a94', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
-      img('1600568358326-4099998c4c5b', 1600),
+      IMAGES.villaDusk,
+      IMAGES.livingRoom,
+      IMAGES.poolHouse,
+      IMAGES.diningSuite,
     ],
     description:
       'A sculptural lakeside villa defined by floor-to-ceiling glass, clean horizontal lines, and a seamless indoor-outdoor flow. Designed by an award-winning architectural studio, the residence opens onto a resort-style pool deck with uninterrupted water views.',
@@ -65,12 +63,12 @@ export const properties: Property[] = [
     yearBuilt: 2020,
     garage: 3,
     featured: true,
-    image: img('1600596542815-52adff820b66'),
+    image: IMAGES.glassVilla,
     gallery: [
-      img('1600596542815-52adff820b66', 1600),
-      img('1600585154340-be6161a68a94', 1600),
-      img('1512917774080-9991f1c4c750', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
+      IMAGES.glassVilla,
+      IMAGES.livingRoom,
+      IMAGES.modernHome,
+      IMAGES.interiorWarm,
     ],
     description:
       'Perched above the Pacific, this glass-walled residence dissolves the boundary between architecture and ocean. Expansive terraces, a vanishing-edge pool, and a warm material palette of white oak and stone create a serene coastal retreat.',
@@ -109,12 +107,12 @@ export const properties: Property[] = [
     yearBuilt: 2019,
     garage: 3,
     featured: true,
-    image: img('1600607687939-ce8da625f1c0'),
+    image: IMAGES.modernHome,
     gallery: [
-      img('1600607687939-ce8da625f1c0', 1600),
-      img('1600568358326-4099998c4c5b', 1600),
-      img('1518780664697-55e3b9bb3e9b', 1600),
-      img('1600585154340-be6161a68a94', 1600),
+      IMAGES.modernHome,
+      IMAGES.hillsideHome,
+      IMAGES.loungeSuite,
+      IMAGES.poolHouse,
     ],
     description:
       'Set against the Sonoran horizon, this desert estate blends rammed earth, steel, and glass into a composition of light and shadow. Generous overhangs shade deep patios that frame mountain and valley views.',
@@ -153,12 +151,12 @@ export const properties: Property[] = [
     yearBuilt: 2022,
     garage: 3,
     featured: true,
-    image: img('1512917774080-9991f1c4c750'),
+    image: IMAGES.terraceDusk,
     gallery: [
-      img('1512917774080-9991f1c4c750', 1600),
-      img('1600596542815-52adff820b66', 1600),
-      img('1600585154340-be6161a68a94', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
+      IMAGES.terraceDusk,
+      IMAGES.penthouseInterior,
+      IMAGES.glassVilla,
+      IMAGES.bedroomSuite,
     ],
     description:
       'A waterfront statement residence with a private dock, rooftop terrace, and a double-height living volume that opens to the Atlantic. Interiors feature Italian millwork, limestone floors, and a temperature-controlled gallery.',
@@ -197,12 +195,12 @@ export const properties: Property[] = [
     yearBuilt: 2021,
     garage: 2,
     featured: false,
-    image: img('1600585154340-be6161a68a94'),
+    image: IMAGES.hillsideHome,
     gallery: [
-      img('1600585154340-be6161a68a94', 1600),
-      img('1600568358326-4099998c4c5b', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
-      img('1518780664697-55e3b9bb3e9b', 1600),
+      IMAGES.hillsideHome,
+      IMAGES.sunsetHouse,
+      IMAGES.cozyLiving,
+      IMAGES.poolHouse,
     ],
     description:
       'Cascading down a Hollywood hillside, this retreat uses cantilevered volumes and a neutral palette to dissolve into the landscape. Terraced gardens and an infinity pool capture the city skyline below.',
@@ -241,12 +239,12 @@ export const properties: Property[] = [
     yearBuilt: 2023,
     garage: 4,
     featured: true,
-    image: img('1564013799919-ab6000fcffc6'),
+    image: IMAGES.estate,
     gallery: [
-      img('1564013799919-ab6000fcffc6', 1600),
-      img('1512917774080-9991f1c4c750', 1600),
-      img('1600596542815-52adff820b66', 1600),
-      img('1600585154340-be6161a68a94', 1600),
+      IMAGES.estate,
+      IMAGES.villaDusk,
+      IMAGES.classicInterior,
+      IMAGES.glassVilla,
     ],
     description:
       'A gated Beverly Hills estate centered on a palm-lined reflecting pool. The residence pairs grand entertaining spaces with intimate, light-filled interiors finished in travertine, bronze, and white oak.',
@@ -285,12 +283,12 @@ export const properties: Property[] = [
     yearBuilt: 2020,
     garage: 2,
     featured: false,
-    image: img('1600568358326-4099998c4c5b'),
+    image: IMAGES.sunsetHouse,
     gallery: [
-      img('1600568358326-4099998c4c5b', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
-      img('1600585154340-be6161a68a94', 1600),
-      img('1518780664697-55e3b9bb3e9b', 1600),
+      IMAGES.sunsetHouse,
+      IMAGES.whiteModern,
+      IMAGES.interiorLight,
+      IMAGES.staircase,
     ],
     description:
       'A timber-and-glass lake house designed for all seasons. A central double-height hearth anchors the open plan, while walls of glass open to a deck and private dock on the water.',
@@ -328,12 +326,12 @@ export const properties: Property[] = [
     yearBuilt: 2022,
     garage: 2,
     featured: false,
-    image: img('1545324418-cc1a3a10bed4'),
+    image: IMAGES.penthouseInterior,
     gallery: [
-      img('1545324418-cc1a3a10bed4', 1600),
-      img('1600585154340-be6161a68a94', 1600),
-      img('1600607687939-ce8da625f1c0', 1600),
-      img('1600568358326-4099998c4c5b', 1600),
+      IMAGES.penthouseInterior,
+      IMAGES.apartment,
+      IMAGES.livingRoom,
+      IMAGES.bathSuite,
     ],
     description:
       'A full-floor downtown penthouse with 360-degree skyline views. A wraparound terrace, designer kitchen, and a primary suite with a private terrace define this elevated urban residence.',
@@ -362,7 +360,7 @@ export const agents: Agent[] = [
     id: 'daniel-morgan',
     name: 'Daniel Morgan',
     role: 'Managing Director',
-    image: img('1507003211169-0a1dd7228f2d', 800),
+    image: IMAGES.portraitMan1,
     email: 'daniel@horizonproperties.com',
     phone: '(555) 246-7890',
   },
@@ -370,7 +368,7 @@ export const agents: Agent[] = [
     id: 'olivia-carter',
     name: 'Olivia Carter',
     role: 'Luxury Property Advisor',
-    image: img('1494790108377-be9c29b379b0', 800),
+    image: IMAGES.portraitWoman1,
     email: 'olivia@horizonproperties.com',
     phone: '(555) 246-7891',
   },
@@ -378,7 +376,7 @@ export const agents: Agent[] = [
     id: 'james-wilson',
     name: 'James Wilson',
     role: 'Investment Consultant',
-    image: img('1500648767791-00dcc994a43e', 800),
+    image: IMAGES.portraitMan2,
     email: 'james@horizonproperties.com',
     phone: '(555) 246-7892',
   },
@@ -386,7 +384,7 @@ export const agents: Agent[] = [
     id: 'sophia-bennett',
     name: 'Sophia Bennett',
     role: 'Senior Property Specialist',
-    image: img('1438761681033-6461ffad8d80', 800),
+    image: IMAGES.portraitWoman2,
     email: 'sophia@horizonproperties.com',
     phone: '(555) 246-7893',
   },
@@ -397,7 +395,7 @@ export const team: TeamMember[] = [
     id: 'daniel-morgan',
     name: 'Daniel Morgan',
     role: 'Managing Director',
-    image: img('1507003211169-0a1dd7228f2d', 800),
+    image: IMAGES.portraitMan1,
     email: 'daniel@horizonproperties.com',
     phone: '(555) 246-7890',
     bio: 'Two decades guiding clients through the most considered acquisitions in the luxury market.',
@@ -406,7 +404,7 @@ export const team: TeamMember[] = [
     id: 'olivia-carter',
     name: 'Olivia Carter',
     role: 'Luxury Property Advisor',
-    image: img('1494790108377-be9c29b379b0', 800),
+    image: IMAGES.portraitWoman1,
     email: 'olivia@horizonproperties.com',
     phone: '(555) 246-7891',
     bio: 'Specialist in architectural homes and waterfront estates across the West Coast.',
@@ -415,7 +413,7 @@ export const team: TeamMember[] = [
     id: 'james-wilson',
     name: 'James Wilson',
     role: 'Investment Consultant',
-    image: img('1500648767791-00dcc994a43e', 800),
+    image: IMAGES.portraitMan2,
     email: 'james@horizonproperties.com',
     phone: '(555) 246-7892',
     bio: 'Builds data-driven investment portfolios for discerning private and institutional clients.',
@@ -424,7 +422,7 @@ export const team: TeamMember[] = [
     id: 'sophia-bennett',
     name: 'Sophia Bennett',
     role: 'Senior Property Specialist',
-    image: img('1438761681033-6461ffad8d80', 800),
+    image: IMAGES.portraitWoman2,
     email: 'sophia@horizonproperties.com',
     phone: '(555) 246-7893',
     bio: 'Known for an exacting eye and seamless transactions in the ultra-luxury segment.',
@@ -437,7 +435,7 @@ export const services: Service[] = [
     title: 'Luxury Home Sales',
     description:
       'Curated representation of architectural and estate properties, marketed to a global qualified audience.',
-    image: img('1512917774080-9991f1c4c750', 1000),
+    image: IMAGES.villaDusk,
     number: '01',
   },
   {
@@ -445,7 +443,7 @@ export const services: Service[] = [
     title: 'Property Investment',
     description:
       'Strategic acquisition and portfolio guidance backed by deep market intelligence and forecasting.',
-    image: img('1600607687939-ce8da625f1c0', 1000),
+    image: IMAGES.modernHome,
     number: '02',
   },
   {
@@ -453,7 +451,7 @@ export const services: Service[] = [
     title: 'Property Marketing',
     description:
       'Editorial-grade photography, film, and storytelling that position each home as a singular opportunity.',
-    image: img('1600585154340-be6161a68a94', 1000),
+    image: IMAGES.diningSuite,
     number: '03',
   },
   {
@@ -461,7 +459,7 @@ export const services: Service[] = [
     title: 'Real Estate Advisory',
     description:
       'Confidential counsel on acquisition strategy, negotiation, and structuring for complex transactions.',
-    image: img('1600596542815-52adff820b66', 1000),
+    image: IMAGES.glassVilla,
     number: '04',
   },
   {
@@ -469,7 +467,7 @@ export const services: Service[] = [
     title: 'Property Valuation',
     description:
       'Precise, defensible appraisals grounded in comparable data and an intimate read of the local market.',
-    image: img('1600568358326-4099998c4c5b', 1000),
+    image: IMAGES.hillsideHome,
     number: '05',
   },
   {
@@ -477,7 +475,7 @@ export const services: Service[] = [
     title: 'Relocation Services',
     description:
       'End-to-end relocation support, from neighborhood discovery to settling into your new home.',
-    image: img('1564013799919-ab6000fcffc6', 1000),
+    image: IMAGES.estate,
     number: '06',
   },
 ]

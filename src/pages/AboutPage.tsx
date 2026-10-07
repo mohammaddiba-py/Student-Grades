@@ -58,13 +58,13 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={120} className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a68a94?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80"
                 alt="Modern luxury home"
                 loading="lazy"
                 className="aspect-[3/4] w-full rounded-2xl object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8da625f1c0?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
                 alt="Architectural property"
                 loading="lazy"
                 className="mt-8 aspect-[3/4] w-full rounded-2xl object-cover"

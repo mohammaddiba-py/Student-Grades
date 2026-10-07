@@ -41,7 +41,6 @@ export default function ImageGallery({ images, alt }: ImageGalleryProps) {
             src={images[active]}
             alt={`${alt} — image ${active + 1}`}
             className="h-full w-full object-cover"
-            fetchPriority="high"
           />
         </div>
         <button
